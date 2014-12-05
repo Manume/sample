@@ -43,6 +43,7 @@ gem 'meta-tags'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'carrierwave'
+
 gem 'rmagick'
 gem 'rails_admin'
 group :development do
