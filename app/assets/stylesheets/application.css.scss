@@ -24,11 +24,29 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+
+ .carousel-inner { .item {
+transition: (.5s ease-in-out);
+} .active, .next, .prev, .next.left, .prev.right, .active.left, .active.right{
+left: 0;
+}
+}
+
+
  .carousel-caption {
       
-      font-size: 20px;
-      margin-bottom: 330px;
+      
+      margin-bottom: 250px;
       text-align:center;
+      font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+      color: #fed136;
+}
+.carousel-caption p{
+font-size: 50px;
+}
+.carousel-caption h6{
+font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+      color: #fed136;
 }
  
 

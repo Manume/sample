@@ -3,7 +3,7 @@ class ContactMailer < ActionMailer::Base
  
   def welcome_email(contact)
     @contact = contact
-   @to = "manu.ideology@gmail.com"
+   @to = "vinod@ideologysoft.com"
     mail(to: @to, subject: 'Welcome to My Awesome Site')
   end
 end
