@@ -1,0 +1,96 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title text-center"><%= @career.job_title %></h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><p>
+        <h5>
+          <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+          <small><%= @career.location %></small>
+        
+        
+          <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+          <small>posted:<%= time_ago_in_words @career.created_at%> ago</small></h5></p>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+      <div class="container">
+      <div class="col-md-2"></div>
+      <div class="col-md-6">
+        <% @career.jobs.each do |job| %>
+  <ul style="list-style-type: square;">
+    
+  <h4> job Description</h4>
+        <% if job.des1.present?%>
+        <li><%= job.des1 %></li>
+        <%end%>
+        <% if job.des2.present?%>
+        <li><%= job.des2 %></li>
+        <%end%>
+        <% if job.des3.present?%>
+        <li><%= job.des3 %></li>
+        <%end%>
+        <% if job.des4.present?%>
+        <li><%= job.des4 %></li>
+        <%end%>
+        <% if job.des5.present?%>
+        <li><%= job.des5 %></li>
+        <%end%>
+        <% if job.des6.present?%>
+        <li><%= job.des6 %></li>
+        <%end%>
+        <% if job.des7.present?%>
+        <li><%= job.des7 %></li>
+        <%end%>
+        <% if job.des8.present?%>
+        <li><%= job.des8 %></li>
+        <%end%>
+        
+        <h4><%= "Preferred Skills"%></h4>
+        <% if job.skill1.present?%>
+        <li><%= job.skill1 %></li>
+        <%end%>
+        <% if job.skill2.present?%>
+        <li><%= job.skill2 %></li>
+        <%end%>
+        <% if job.skill3.present?%>
+        <li><%= job.skill3 %></li>
+        <%end%>
+        <% if job.skill4.present?%>
+        <li><%= job.skill4 %></li>
+        <%end%>
+        <% if job.skill5.present?%>
+        <li><%= job.skill5 %></li>
+        <%end%>
+        <% if job.skill6.present?%>
+        <li><%= job.skill6 %></li>
+        <%end%>
+        <% if job.skill7.present?%>
+        <li><%= job.skill7 %></li>
+        <%end%>
+        
+        
+  </ul>
+        
+<%end%>
+    <center><%= link_to "apply for job",new_resume_path,remote: true,class: "btn btn-info" %></center>
+  </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div id="apply" class="modal fade"></div>

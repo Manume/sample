@@ -1,0 +1,57 @@
+<h1>Listing jobs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Career</th>
+      <th>Des1</th>
+      <th>Des2</th>
+      <th>Des3</th>
+      <th>Des4</th>
+      <th>Des5</th>
+      <th>Des6</th>
+      <th>Des7</th>
+      <th>Des8</th>
+      <th>Skill1</th>
+      <th>Skill2</th>
+      <th>Skill3</th>
+      <th>Skill4</th>
+      <th>Skill4</th>
+      <th>Skill5</th>
+      <th>Skill6</th>
+      <th>Skill7</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+      <tr>
+        <td><%= job.career %></td>
+        <td><%= job.des1 %></td>
+        <td><%= job.des2 %></td>
+        <td><%= job.des3 %></td>
+        <td><%= job.des4 %></td>
+        <td><%= job.des5 %></td>
+        <td><%= job.des6 %></td>
+        <td><%= job.des7 %></td>
+        <td><%= job.des8 %></td>
+        <td><%= job.skill1 %></td>
+        <td><%= job.skill2 %></td>
+        <td><%= job.skill3 %></td>
+        <td><%= job.skill4 %></td>
+        <td><%= job.skill4 %></td>
+        <td><%= job.skill5 %></td>
+        <td><%= job.skill6 %></td>
+        <td><%= job.skill7 %></td>
+        <td><%= link_to 'Show', job %></td>
+        <td><%= link_to 'Edit', edit_job_path(job) %></td>
+        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Job', new_job_path %>

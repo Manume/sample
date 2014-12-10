@@ -21,7 +21,6 @@
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top"><%= image_tag "logo.jpg", width: 150%></a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -32,10 +31,17 @@
                         <a class="page-scroll" href="#services">Services</a>
                     </li>
                     <li>
+                        <% if @portfolios.present? %>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <%end%>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <% if @careers.present? %>
+                        <a class="page-scroll" href="#career">Careers</a>
+                        <%end%>
                     </li>
                     <li>
                         <!--<a class="page-scroll" href="#team">Team</a>-->
@@ -49,46 +55,36 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-
     <!-- Header -->
-    <header>
-        
-  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <%= image_tag "elements_wallpapers_30861_1920x1080.jpg"%>
-      <div class="carousel-caption">
-        <p>We Design Your Needs into Business</p>
-        <h6>ideology software pvt ltd</h6>
-
-    
+    <header>        
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+        <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= image_tag "elements_wallpapers_30861_1920x1080.jpg"%>
+          <div class="carousel-caption">
+            <p>We Design Your Needs into Business</p>
+            <h6>ideology software pvt ltd</h6>    
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag "wallpaper_2345.jpg"%>
+          <div class="carousel-caption">
+            <p>We Design Your Needs into Business</p>
+            <h6>ideology software pvt ltd</h6>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag "elements_wallpapers_30861_1920x1080.jpg"%>
+          <div class="carousel-caption">
+            <p>We Design Your Needs into Business</p>
+            <h6>ideology software pvt ltd</h6>
+          </div>
+        </div>   
       </div>
-    </div>
-    <div class="item">
-      <%= image_tag "wallpaper_2345.jpg"%>
-      <div class="carousel-caption">
-        <p>We Design Your Needs into Business</p>
-        <h6>ideology software pvt ltd</h6>
-      </div>
-    </div>
-    <div class="item">
-      <%= image_tag "wallpaper_2345.jpg"%>
-      <div class="carousel-caption">
-        <p>We Design Your Needs into Business</p>
-        <h6>ideology software pvt ltd</h6>
-      </div>
-    </div>
-   
-  </div>
-
-  <!-- Controls -->
-  
-</div>
-        
+      <!-- Controls -->  
+      </div>        
     </header>
     <center><p id="notice"><%= notice %></p></center>
     <!-- Services Section -->
@@ -96,189 +92,180 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Services</h2>
-                    
+                    <h2 class="section-heading">Services</h2>                    
                 </div>
             </div>
             <div class="row text-center">
                 <div class="col-md-3 feature">
-
                    <div class="feature animate fadeInUp cssanim">
-                                <div class="feature-img">
-                                    <%= image_tag"responsive-design-hero.png"%>
-                                </div>
-                                <div class="feature-box">
-                                    <h3>Responsive Design</h3>
-                                    <h6></h6>
-                                    <p>Our in-house team of developers build and maintain websites which ensures functionality and a memorable user experience.</p>
-                                </div><!--end feature-box-->
-                            </div><!--end feature-->
-                        </div>
-
-
-                    
-                
-                 <div class="col-md-3 feature">
-
-                   <div class="feature animate fadeInUp cssanim">
-                                <div class="feature-img">
-                                    <%= image_tag"application-development.png"%>
-                                </div>
-                                <div class="feature-box">
-                                    <h3>APPLICATION DEVELOPMENT SERVICES</h3>
-                                    <h6></h6>
-                                    <p>Our Applications Development Services develops feature-rich business applications based on open industry standards that enable your business to reach new levels of business.</p>
-                                </div><!--end feature-box-->
-                            </div><!--end feature-->
-                        </div>
-                 <div class="col-md-3 feature">
-
-                   <div class="feature animate fadeInUp cssanim">
-                                <div class="feature-img">
-                                    <%= image_tag"p4.jpg"%>
-                                </div>
-                                <div class="feature-box">
-                                    <h3>WEB DEVELOPMENT SERVICES</h3>
-                                    <h6></h6>
-                                    <p>We offer a full range of custom web development services. We can help you create a feature-rich online and offline Web application to sell your products and services.</p>
-                                </div><!--end feature-box-->
-                            </div><!--end feature-->
-                        </div>
-                         <div class="col-md-3 feature">
-
-                   <div class="feature animate fadeInUp cssanim">
-                                <div class="feature-img">
-                                    <%= image_tag"candy_land.jpg"%>
-                                </div>
-                                <div class="feature-box">
-                                    <h3>Animation</h3>
-                                    <h6></h6>
-                                    <p>Our Applications Development Services develops feature-rich business applications based on open industry standards that enable your business to reach new levels of business.</p>
-                                </div><!--end feature-box-->
-                            </div><!--end feature-->
-                        </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted"></h3>
-                </div>
-            </div>
-            
-
-            <div class="row">
-            
-            <% @portfolios.each do |portfolio| %>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    
-                        
-                         <%= link_to (image_tag portfolio.portfolio_image_url,width: 358,height: 200), portfolio,remote: true,class: "portfolio-link" %>
-                    
-                      
-                        
-                        <%#= image_tag portfolio.portfolio_image_url(:thumb) %>
-                        <%#= portfolio.description %>
-                        
-                           
-                        
-                                            
-                      
-                    
-                    <div class="portfolio-caption">
-                        <center>
-                            <h4><%= portfolio.name %></h4>
-                        <p class="text-muted"><%= portfolio.type_of_design %></p>
-                        </center>
+                      <div class="feature-img">
+                        <%= image_tag"responsive-design-hero.png"%>
+                      </div>
+                        <div class="feature-box">
+                            <h3>Responsive Design</h3>
+                            <h6></h6>
+                            <p>Our in-house team of developers build and maintain websites which ensures functionality and a memorable user experience.</p>
+                        </div><!--end feature-box-->
+                    </div><!--end feature-->
+                </div>               
+                <div class="col-md-3 feature">
+                  <div class="feature animate fadeInUp cssanim">
+                    <div class="feature-img">
+                      <%= image_tag"application-development.png"%>
                     </div>
-                    
+                    <div class="feature-box">
+                        <h3>APPLICATION DEVELOPMENT SERVICES</h3>
+                        <h6></h6>
+                        <p>Our Applications Development Services develops feature-rich business applications based on open industry standards that enable your business to reach new levels of business.</p>
+                    </div><!--end feature-box-->
+                  </div><!--end feature-->
                 </div>
-                <% end %>
-                
+                <div class="col-md-3 feature">
+                  <div class="feature animate fadeInUp cssanim">
+                    <div class="feature-img">
+                        <%= image_tag"p4.jpg"%>
+                    </div>
+                    <div class="feature-box">
+                        <h3>WEB DEVELOPMENT SERVICES</h3>
+                        <h6></h6>
+                        <p>We offer a full range of custom web development services. We can help you create a feature-rich online and offline Web application to sell your products and services.</p>
+                    </div><!--end feature-box-->
+                   </div><!--end feature-->
+                </div>
+                <div class="col-md-3 feature">
+                  <div class="feature animate fadeInUp cssanim">
+                    <div class="feature-img">
+                        <%= image_tag"candy_land.jpg"%>
+                    </div>
+                    <div class="feature-box">
+                        <h3>Animation</h3>
+                        <h6></h6>
+                        <p>Our Applications Development Services develops feature-rich business applications based on open industry standards that enable your business to reach new levels of business.</p>
+                    </div><!--end feature-box-->
+                  </div><!--end feature-->
+                </div>
             </div>
-            
         </div>
-
-        <div id="port" class="modal fade"></div>
     </section>
-
+    <!-- Portfolio Grid Section -->
+    <% if @portfolios.present? %>
+      <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading">Portfolio</h2>
+              <h3 class="section-subheading text-muted"></h3>
+            </div>
+          </div>
+          <div class="row">            
+            <% @portfolios.each do |portfolio| %>
+              <div class="col-md-4 col-sm-6 portfolio-item">
+                <%= link_to (image_tag portfolio.portfolio_image_url,width: 358,height: 200), portfolio,remote: true,class: "portfolio-link" %>
+                <div class="portfolio-caption">
+                  <center>
+                    <h4><%= portfolio.name %></h4>
+                    <p class="text-muted"><%= portfolio.type_of_design %></p>
+                  </center>
+                </div>                    
+              </div>
+            <% end %>                
+          </div>
+        </div>
+        <div id="port" class="modal fade"></div>
+      </section>
+    <%end%>
     <!-- About Section -->
     <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About</h2>
-                    <h3 class="section-subheading text-muted">Ideology software pvt ltd</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <%= image_tag "whoweare.png", class: "img-circle img-responsive"%>
-                            </div>
-                            <div class="timeline-panel" >
-                                <div class="timeline-heading">
-                                    <h4 >Who We Are....!</h4>
-                                    
-                                </div>
-                                <div class="timeline-body" >
-                                    <p class="text-muted" >Productivity and agility by providing e-Business Solutions, automating forms and document-based business processes. A contemporary, powerful and standards-compliant suite of products enables customers to improve operational efficiency and gain a competitive edge by reducing manual data entry costs, improving information accuracy, automating routing procedures, and providing immediate, personalized communications to customers, partners and employees. Our strengths are our technical expertise in making diverse technologies work together and our commitment to maintain high service standards. </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                
-                                <%= image_tag "Our_Mission.png", class: "img-circle img-responsive"%>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>MISSION :</h4>
-                                    
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">IDEOLOGY SOFTWARE TECHNOLOGIES is focused on leveraging and extending the capabilities of technology to help companies move towards predictive business: an innovative way of doing business that lets companies anticipate customer needs, create opportunities and avoid potential proble</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                
-                                 <%= image_tag "vision.png", class: "img-circle img-responsive"%>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>Our Vision:</h4>
-                                    
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">To be a Globally respected Business solution provider and the first choice of fortune 500 companies when it comes to delivering the most optimum business solutions.</p>
-                                </div>
-                            </div>
-                        </li>
-                        
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>Be Part
-                                    <br>Of Our
-                                    <br>Story!</h4>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">About</h2>
+            <h3 class="section-subheading text-muted">Ideology software pvt ltd</h3>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+              <ul class="timeline">
+                <li>
+                  <div class="timeline-image">
+                    <%= image_tag "whoweare.png", class: "img-circle img-responsive"%>
+                  </div>
+                  <div class="timeline-panel" >
+                    <div class="timeline-heading">
+                      <h4 >Who We Are....!</h4>                                    
+                    </div>
+                    <div class="timeline-body" >
+                        <p class="text-muted" >Productivity and agility by providing e-Business Solutions, automating forms and document-based business processes. A contemporary, powerful and standards-compliant suite of products enables customers to improve operational efficiency and gain a competitive edge by reducing manual data entry costs, improving information accuracy, automating routing procedures, and providing immediate, personalized communications to customers, partners and employees. Our strengths are our technical expertise in making diverse technologies work together and our commitment to maintain high service standards. </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-inverted">
+                  <div class="timeline-image">                                
+                    <%= image_tag "Our_Mission.png", class: "img-circle img-responsive"%>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4>MISSION :</h4>                                    
+                    </div>
+                    <div class="timeline-body">
+                      <p class="text-muted">IDEOLOGY SOFTWARE TECHNOLOGIES is focused on leveraging and extending the capabilities of technology to help companies move towards predictive business: an innovative way of doing business that lets companies anticipate customer needs, create opportunities and avoid potential proble</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="timeline-image">                                
+                    <%= image_tag "vision.png", class: "img-circle img-responsive"%>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4>Our Vision:</h4>                                    
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">To be a Globally respected Business solution provider and the first choice of fortune 500 companies when it comes to delivering the most optimum business solutions.</p>
+                    </div>
+                  </div>
+                </li>                        
+                <li class="timeline-inverted">
+                  <div class="timeline-image">
+                    <h4>Be Part
+                      <br>Of Our
+                      <br>Story!
+                    </h4>
+                  </div>
+                </li>
+              </ul>
             </div>
         </div>
+      </div>
     </section>
-
-   
-
+    <% if @careers.present? %>
+      <section id="career">
+        <div class="container">
+          <div class="row">      
+            <center><h3>job Openings</h3></center>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Job title</th>
+                  <th>Location</th>
+                  <th>last update</th>              
+                </tr>
+              </thead>
+              <tbody>
+                <% @careers.each do |career| %>
+                  <tr>
+                    <td><%= link_to career.job_title,career,remote: true,class: "btn btn-success" %></td>
+                    <td><%= career.location %></td>
+                    <td><%= time_ago_in_words career.created_at  %> ago</td>                
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+            <div id ="careers-show"></div>        
+          </div>
+        </div>
+      </section>
+    <%end%>
     <section id="contact">
       <div class="container">
         <div class="row">
@@ -308,55 +295,47 @@
                 </div>
             </div>
             <div class="col-md-5">
-                <div class="well well-sm">
-                  
-                    <fieldset>
-                      <legend class="text-center header">contact us</legend>
-                       <center><%= image_tag "river_trees_summer_during_the_shore_92679_1920x1080.jpg",width: 150,class: "img-circle img-responsive" %></center>
-                        
-                            
-                           
-                           
-                        <%= form_for(@contact) do |f| %>
-                          <% if @contact.errors.any? %>
-                            <div id="error_explanation">
-                              <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
-
-                              <ul>
-                              <% @contact.errors.full_messages.each do |message| %>
-                                <li><%= message %></li>
-                              <% end %>
-                              </ul>
-                            </div>
+              <div class="well well-sm">                  
+                <fieldset>
+                  <legend class="text-center header">contact us</legend>
+                  <center><%= image_tag "river_trees_summer_during_the_shore_92679_1920x1080.jpg",width: 150,class: "img-circle img-responsive" %></center>  
+                  <%= form_for(@contact) do |f| %>
+                    <% if @contact.errors.any? %>
+                      <div id="error_explanation">
+                        <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+                        <ul>
+                          <% @contact.errors.full_messages.each do |message| %>
+                            <li><%= message %></li>
                           <% end %>
-                          <div class="form-group">
-                            <div class="col-md-10 col-md-offset-1">
+                        </ul>
+                      </div>
+                    <% end %>
+                    <div class="form-group">
+                      <div class="col-md-10 col-md-offset-1">
                               <%#= f.label :name %>
-                              <%= f.text_field :name ,class: "form-control",placeholder: "Your Name"%>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <div class="col-md-10 col-md-offset-1">
+                        <%= f.text_field :name ,class: "form-control",placeholder: "Your Name"%>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-10 col-md-offset-1">
                             <%#= f.label :email %><br>
-                            <%= f.text_field :email,class: "form-control",placeholder: "Email" %>
-                            </div>
-                          </div>
-
-                          <div class="form-group">
-                            <div class="col-md-10 col-md-offset-1">
+                        <%= f.text_field :email,class: "form-control",placeholder: "Email" %>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-10 col-md-offset-1">
                             <%#= f.label :message %><br>
-                            <%= f.text_area :message,class: "form-control",placeholder: "Enter your massage for us here. We will get back to you within 2 business days.",rows: "7" %>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <div class="col-md-12 text-center"><br>
-                             <%= f.submit "submit", class: "btn btn-primary btn-lg" %>
-                            </div>
-                          </div>
-                        <% end %>
-                    </fieldset>
-                  
-                </div>
+                        <%= f.text_area :message,class: "form-control",placeholder: "Enter your massage for us here. We will get back to you within 2 business days.",rows: "7" %>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-12 text-center"><br>
+                        <%= f.submit "submit", class: "btn btn-primary btn-lg" %>
+                      </div>
+                    </div>
+                  <% end %>
+                </fieldset>                  
+              </div>
             </div>        
         </div>
 
@@ -399,167 +378,143 @@
         </style>
       </div>
     </section>
-
-<!-- Contact with Map - END -->
-
-
-
-       
+<!-- Contact with Map - END -->  
     <footer>
-        <div class="container">
-               <div class="row">
-                <div class="col-lg-12 text-center">
-                    <span class="copyright">Copyright &copy; ideologysoft 2014 | Design by <a href="#">ideologysoft.com
-                    </a></span>
-                </div>
-                </div>
-                <div class="col-lg-12 text-center">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="https://twitter.com/ideologysoft"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="https://www.facebook.com/IdeologySoftwareTechnologiesPvtLtd"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="https://www.linkedin.com/company/ideology-software-technologies-pvt-ltd"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>           
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <span class="copyright">Copyright &copy; ideologysoft 2014 | Design by <a href="#">ideologysoft.com
+            </a></span>
+          </div>
         </div>
+        <div class="col-lg-12 text-center">
+          <ul class="list-inline social-buttons">
+            <li><a href="https://twitter.com/ideologysoft"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li><a href="https://www.facebook.com/IdeologySoftwareTechnologiesPvtLtd"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li><a href="https://www.linkedin.com/company/ideology-software-technologies-pvt-ltd"><i class="fa fa-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>           
+      </div>
     </footer>
-
-    <!-- Portfolio Modals -->
-    <!-- Use the modals below to showcase details about your portfolio projects! -->
-
-    
-
     <!-- jQuery -->
     <script type="text/javascript">
-     /*!
- * classie - class helper functions
- * from bonzo https://github.com/ded/bonzo
- * 
- * classie.has( elem, 'my-class' ) -> true/false
- * classie.add( elem, 'my-new-class' )
- * classie.remove( elem, 'my-unwanted-class' )
- * classie.toggle( elem, 'my-class' )
- */
+      ( function( window ) {
 
-/*jshint browser: true, strict: true, undef: true */
-/*global define: false */
+      'use strict';
 
-( function( window ) {
+      // class helper functions from bonzo https://github.com/ded/bonzo
 
-'use strict';
+      function classReg( className ) {
+        return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
+      }
 
-// class helper functions from bonzo https://github.com/ded/bonzo
+      // classList support for class management
+      // altho to be fair, the api sucks because it won't accept multiple classes at once
+      var hasClass, addClass, removeClass;
 
-function classReg( className ) {
-  return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
-}
+      if ( 'classList' in document.documentElement ) {
+        hasClass = function( elem, c ) {
+          return elem.classList.contains( c );
+        };
+        addClass = function( elem, c ) {
+          elem.classList.add( c );
+        };
+        removeClass = function( elem, c ) {
+          elem.classList.remove( c );
+        };
+      }
+      else {
+        hasClass = function( elem, c ) {
+          return classReg( c ).test( elem.className );
+        };
+        addClass = function( elem, c ) {
+          if ( !hasClass( elem, c ) ) {
+            elem.className = elem.className + ' ' + c;
+          }
+        };
+        removeClass = function( elem, c ) {
+          elem.className = elem.className.replace( classReg( c ), ' ' );
+        };
+      }
 
-// classList support for class management
-// altho to be fair, the api sucks because it won't accept multiple classes at once
-var hasClass, addClass, removeClass;
+      function toggleClass( elem, c ) {
+        var fn = hasClass( elem, c ) ? removeClass : addClass;
+        fn( elem, c );
+      }
 
-if ( 'classList' in document.documentElement ) {
-  hasClass = function( elem, c ) {
-    return elem.classList.contains( c );
-  };
-  addClass = function( elem, c ) {
-    elem.classList.add( c );
-  };
-  removeClass = function( elem, c ) {
-    elem.classList.remove( c );
-  };
-}
-else {
-  hasClass = function( elem, c ) {
-    return classReg( c ).test( elem.className );
-  };
-  addClass = function( elem, c ) {
-    if ( !hasClass( elem, c ) ) {
-      elem.className = elem.className + ' ' + c;
-    }
-  };
-  removeClass = function( elem, c ) {
-    elem.className = elem.className.replace( classReg( c ), ' ' );
-  };
-}
+      var classie = {
+        // full names
+        hasClass: hasClass,
+        addClass: addClass,
+        removeClass: removeClass,
+        toggleClass: toggleClass,
+        // short names
+        has: hasClass,
+        add: addClass,
+        remove: removeClass,
+        toggle: toggleClass
+      };
 
-function toggleClass( elem, c ) {
-  var fn = hasClass( elem, c ) ? removeClass : addClass;
-  fn( elem, c );
-}
+      // transport
+      if ( typeof define === 'function' && define.amd ) {
+        // AMD
+        define( classie );
+      } else {
+        // browser global
+        window.classie = classie;
+      }
 
-var classie = {
-  // full names
-  hasClass: hasClass,
-  addClass: addClass,
-  removeClass: removeClass,
-  toggleClass: toggleClass,
-  // short names
-  has: hasClass,
-  add: addClass,
-  remove: removeClass,
-  toggle: toggleClass
-};
+      })( window );
 
-// transport
-if ( typeof define === 'function' && define.amd ) {
-  // AMD
-  define( classie );
-} else {
-  // browser global
-  window.classie = classie;
-}
+          </script>
+          <script type="text/javascript">
+            /**
+       * cbpAnimatedHeader.js v1.0.0
+       * http://www.codrops.com
+       *
+       * Licensed under the MIT license.
+       * http://www.opensource.org/licenses/mit-license.php
+       * 
+       * Copyright 2013, Codrops
+       * http://www.codrops.com
+       */
+      var cbpAnimatedHeader = (function() {
 
-})( window );
+          var docElem = document.documentElement,
+              header = document.querySelector( '.navbar-default' ),
+              didScroll = false,
+              changeHeaderOn = 300;
 
-    </script>
-    <script type="text/javascript">
-      /**
- * cbpAnimatedHeader.js v1.0.0
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2013, Codrops
- * http://www.codrops.com
- */
-var cbpAnimatedHeader = (function() {
+          function init() {
+              window.addEventListener( 'scroll', function( event ) {
+                  if( !didScroll ) {
+                      didScroll = true;
+                      setTimeout( scrollPage, 250 );
+                  }
+              }, false );
+          }
 
-    var docElem = document.documentElement,
-        header = document.querySelector( '.navbar-default' ),
-        didScroll = false,
-        changeHeaderOn = 300;
+          function scrollPage() {
+              var sy = scrollY();
+              if ( sy >= changeHeaderOn ) {
+                  classie.add( header, 'navbar-shrink' );
+              }
+              else {
+                  classie.remove( header, 'navbar-shrink' );
+              }
+              didScroll = false;
+          }
 
-    function init() {
-        window.addEventListener( 'scroll', function( event ) {
-            if( !didScroll ) {
-                didScroll = true;
-                setTimeout( scrollPage, 250 );
-            }
-        }, false );
-    }
+          function scrollY() {
+              return window.pageYOffset || docElem.scrollTop;
+          }
 
-    function scrollPage() {
-        var sy = scrollY();
-        if ( sy >= changeHeaderOn ) {
-            classie.add( header, 'navbar-shrink' );
-        }
-        else {
-            classie.remove( header, 'navbar-shrink' );
-        }
-        didScroll = false;
-    }
+          init();
 
-    function scrollY() {
-        return window.pageYOffset || docElem.scrollTop;
-    }
-
-    init();
-
-})();
+      })();
 
     </script>
     <script type="text/javascript">

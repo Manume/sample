@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @career.job_title %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @career.location %>
+</p>
+
+<%= link_to 'Edit', edit_career_path(@career) %> |
+<%= link_to 'Back', careers_path %>
+<% @career.jobs.each do |job| %>
+  <p><%= job.career %></p>
+        <p><%= job.des1 %></p>
+        <p><%= job.des2 %></p>
+        <p><%= job.des3 %></p>
+        <p><%= job.des4 %></p>
+        <p><%= job.des5 %></p>
+        <p><%= job.des6 %></p>
+        <p><%= job.des7 %></p>
+        <p><%= job.des8 %></p>
+        <p><%= job.skill1 %></p>
+        <p><%= job.skill2 %></p>
+        <p><%= job.skill3 %></p>
+        <p><%= job.skill4 %></p>
+        <p><%= job.skill4 %></p>
+        <p><%= job.skill5 %></p>
+        <p><%= job.skill6 %></p>
+        <p><%= job.skill7 %></p>
+<%end%>

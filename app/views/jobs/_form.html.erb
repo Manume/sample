@@ -1,0 +1,85 @@
+<%= form_for(@job) do |f| %>
+  <% if @job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% @job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :career_id %><br>
+    <%= f.text_field :career_id %>
+  </div>
+  <div class="field">
+    <%= f.label :des1 %><br>
+    <%= f.text_field :des1 %>
+  </div>
+  <div class="field">
+    <%= f.label :des2 %><br>
+    <%= f.text_field :des2 %>
+  </div>
+  <div class="field">
+    <%= f.label :des3 %><br>
+    <%= f.text_field :des3 %>
+  </div>
+  <div class="field">
+    <%= f.label :des4 %><br>
+    <%= f.text_field :des4 %>
+  </div>
+  <div class="field">
+    <%= f.label :des5 %><br>
+    <%= f.text_field :des5 %>
+  </div>
+  <div class="field">
+    <%= f.label :des6 %><br>
+    <%= f.text_field :des6 %>
+  </div>
+  <div class="field">
+    <%= f.label :des7 %><br>
+    <%= f.text_field :des7 %>
+  </div>
+  <div class="field">
+    <%= f.label :des8 %><br>
+    <%= f.text_field :des8 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill1 %><br>
+    <%= f.text_field :skill1 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill2 %><br>
+    <%= f.text_field :skill2 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill3 %><br>
+    <%= f.text_field :skill3 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill4 %><br>
+    <%= f.text_field :skill4 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill4 %><br>
+    <%= f.text_field :skill4 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill5 %><br>
+    <%= f.text_field :skill5 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill6 %><br>
+    <%= f.text_field :skill6 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill7 %><br>
+    <%= f.text_field :skill7 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

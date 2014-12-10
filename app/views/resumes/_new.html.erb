@@ -1,0 +1,36 @@
+
+
+<%#= link_to 'Back', resumes_path %>
+
+<div id="myModal" class="bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">   
+       <center><h3>Application form</h3> </center>    
+      </div>
+
+      <div class="modal-body">
+      
+      <center><h4 class="modal-title" id="myModalLabel"><%#= @portfolio.name %></h4></center>
+        <p id="notice"><%#= notice %></p>
+
+<p><%#= image_tag @portfolio.portfolio_image_url,width: 560 %></p>
+  
+  <center><p class="text-muted"><%#= @portfolio.type_of_design %></p></center>
+
+  
+<%= render 'form' %>
+<p style="color:blue">
+  
+  <%#= @portfolio.description %>
+</p>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h4>Resume from, <%= @resume.full_name %></h4>
+    <p>
+      <h5>from email, <%= @resume.email_address %></h5>
+    </p>
+    <h5>
+      <%= link_to "download",@resume.upload_cv.url %>
+    </h5>
+    <p>Thanks you ideologysoft.com</p>
+  
+  </body>
+</html>
